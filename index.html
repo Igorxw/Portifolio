@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Santa Luzia</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+
+    header {
+      position: relative;
+      z-index: 1;
+      background-color: #1F2D24;
+      padding: 2rem 0;
+    }
+
+    .header-container {
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    main {
+      position: relative;
+      height: 500px;
+      background-image: url('http://www.carpintariasantaluzia.com.br/img/portfolio/banner.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .content-container {
+      position: relative;
+      z-index: 1;
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 2rem;
+      background-color: #fff;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-container {
+      margin-right: 2rem;
+    }
+
+    .logo {
+      height: 40px;
+    }
+
+    .menu {
+      display: flex;
+      list-style-type: none;
+    }
+
+    .menu li {
+      margin-right: 1rem;
+    }
+
+    .menu li a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    .cta-button {
+      background-color: #1F2D24;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+
+header {
+  position: relative;
+  z-index: 1;
+  background-color: #1F2D24;
+  padding: 2rem 0;
+}
+
+.header-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+main {
+  position: relative;
+  height: 500px;
+  background-image: url('http://www.carpintariasantaluzia.com.br/img/portfolio/banner.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.content-container {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  margin-right: 2rem;
+}
+
+.logo {
+  height: 40px;
+}
+
+.menu {
+  display: flex;
+  list-style-type: none;
+}
+
+.menu li {
+  margin-right: 1rem;
+}
+
+.menu li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.cta-button {
+  background-color: #1F2D24;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+
+.our-work {
+  padding: 4rem 0;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.work-item {
+  text-align: center;
+}
+
+.our-work-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  grid-gap: 2rem;
+}
+
+.work-item img {
+  width: 100%;
+  height: 400px; 
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+} 
+
+.work-item h3 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.work-item p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.view-more-button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #1F2D24;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.view-more-button:hover {
+  background-color: #3c5140;
+}
+
+.contact-section {
+  padding: 4rem 2rem;
+  background-color: #f4f4f4;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.contact-info {
+  max-width: 40%;
+}
+
+.contact-info h2 {
+  font-size: 1.8rem;
+  color: #1F2D24;
+  margin-bottom: 1rem;
+}
+
+.contact-info p {
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.contact-info a {
+  color: #1F2D24;
+  text-decoration: none;
+}
+
+.contact-form {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  background-color: #1F2D24;
+  color: #fff;
+  border: none;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.contact-form button:hover {
+  background-color: #3c5140;
+}
+
+.testimonials {
+  padding: 4rem 2rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+.testimonials-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonials h2 {
+  font-size: 2rem;
+  color: #1F2D24;
+  margin-bottom: 2rem;
+}
+
+.testimonial-item {
+  margin-bottom: 2rem;
+}
+
+.testimonial-item p {
+  font-size: 1rem;
+  color: #333;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.testimonial-item span {
+  font-size: 0.9rem;
+  color: #666;
+}
+  
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+       </div>
+  </header>
+
+  <main>
+    <div class="content-container">
+      <div class="logo-container">
+        <img src="http://www.carpintariasantaluzia.com.br/img/logo.png"  class="logo">
+      </div>
+      <ul class="menu">
+        <li><a href="#">Sobre Nós</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Produtos</a></li>
+        <li><a href="#">Parceiros</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+      <a href="#" class="cta-button">FAÇA UM ORÇAMENTO</a>
+    </div>
+  </main>
+  <section class="our-work">
+    <div class="our-work-container">
+     
+      <div class="work-item">
+        <img src="http://www.carpintariasantaluzia.com.br/img/portfolio/portoes/capa.jpg" >
+        <h3>PORTÕES</h3>
+        <p>Nossos portões são fabricados com madeiras de alta qualidade e durabilidade, resistentes às ações do tempo, como chuvas, ventos e sol intenso.</p>
+        <a href="#" class="view-more-button">VER MAIS</a>
+      </div>
+  
+      <div class="work-item">
+        <img src="http://www.carpintariasantaluzia.com.br/img/portfolio/esquadrias/capa.jpg">
+        <h3>ESQUADRIAS</h3>
+        <p>As esquadrias de madeira são versáteis, atemporais, podem ser produzidas em diversos tipos de madeira e trazem charme e elegância para o ambiente.</p>
+        <a href="#" class="view-more-button">VER MAIS</a>
+      </div>
+  
+      <div class="work-item">
+        <img src="http://www.carpintariasantaluzia.com.br/img/portfolio/casas/capa.jpg">
+        <h3>CASAS</h3>
+        <p>Fornecemos todo material em madeira para a sua casa como madeira para telhado, assoalhos, forros, etc. E o melhor, nossa madeira é legalizada e não degrada o meio ambiente.</p>
+        <a href="#" class="view-more-button">VER MAIS</a>
+      </div>
+  
+   
+      <div class="work-item">
+        <img src="http://www.carpintariasantaluzia.com.br/img/portfolio/moveis-sob-medida/capa.jpg?v=2" >
+        <h3>MÓVEIS SOB MEDIDA</h3>
+        <p>Nossos móveis sob medida são produzidos com a excelência almejada pelos clientes. Aqui transformamos o seu sonho em realidade.</p>
+        <a href="#" class="view-more-button">VER MAIS</a>
+      </div>
+  
+      <div class="work-item">
+        <img src="http://www.carpintariasantaluzia.com.br/img/portfolio/deck/capa.jpg" >
+        <h3>DECK</h3>
+        <p>Os decks de madeira são muito utilizados em áreas externas e trazem beleza natural e sofisticação para o ambiente, ideais para varandas e áreas de piscina.</p>
+        <a href="#" class="view-more-button">VER MAIS</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <div class="testimonials-container">
+      <h2>O que nossos clientes dizem</h2>
+      <div class="testimonial-item">
+        <p>"Ótima qualidade e atendimento excepcional! Recomendo a Carpintaria Santa Luzia para todos."</p>
+        <span>- Maria Oliveira</span>
+      </div>
+      <div class="testimonial-item">
+        <p>"Os móveis sob medida ficaram incríveis e superaram todas as nossas expectativas."</p>
+        <span>- João Mendes</span>
+      </div>
+      <div class="testimonial-item">
+        <p>"Excelente trabalho! A madeira é de alta qualidade e o atendimento foi muito atencioso."</p>
+        <span>- Ana Silva</span>
+      </div>
+    </div>
+  </section>
+  
+
+  <section class="contact-section">
+    <div class="contact-container">
+      <div class="contact-info">
+        <h2>Vamos conversar e fazer um orçamento?</h2>
+        <p>
+          Envie sua pergunta para <a href="mailto:contato@carpintariasantaluzia.com.br">contato@carpintariasantaluzia.com.br</a> ou entre em contato com seus especialistas locais usando os detalhes de contato abaixo.
+        </p>
+        <p><strong>(24) 2222 - 1826 | (24) 2222 - 1370</strong></p>
+        <p><a href="mailto:contato@carpintariasantaluzia.com.br">contato@carpintariasantaluzia.com.br</a></p>
+      </div>
+      <form class="contact-form">
+        <input type="text" name="name" placeholder="Nome" required>
+        <input type="tel" name="phone" placeholder="Telefone" required>
+        <input type="email" name="email" placeholder="E-mail" required>
+        <textarea name="message" placeholder="Mensagem" rows="4" required></textarea>
+        <button type="submit">ENVIAR</button>
+      </form>
+    </div>
+  </section>
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+  
+  
+</body>
+</html>
